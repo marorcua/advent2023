@@ -1,6 +1,6 @@
 "use strict";
 const fs = require('fs');
-const data = fs.readFileSync('input.txt', 'utf8').toString().split('\n');
+const data01 = fs.readFileSync('input.txt', 'utf8').toString().split('\n');
 const stringNumbers = [
     'one',
     'two',
@@ -61,5 +61,5 @@ const calculatePosition = (word) => {
     console.log('calculating number ', word, numbersFound, finalNumber);
     return finalNumber;
 };
-const response = data.reduce((acc, e) => acc + calculatePosition(e), 0);
+const response = data01.reduce((acc, e) => acc + calculatePosition(e), 0);
 console.log('response: ', response);

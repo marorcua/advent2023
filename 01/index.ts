@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const data = fs.readFileSync('input.txt', 'utf8').toString().split('\n')
+const data01 = fs.readFileSync('input.txt', 'utf8').toString().split('\n')
 
 const stringNumbers = [
   'one',
@@ -95,7 +95,7 @@ const calculatePosition = (word: string): number => {
   return finalNumber
 }
 
-const response = data.reduce(
+const response = data01.reduce(
   (acc: number, e: string) => acc + calculatePosition(e),
   0
 )
